@@ -1,13 +1,13 @@
 # Image Filter
 Simple image filter in C++ based on an individual school task by DI Florian Ivenz<br>
 Available effects:
->+ sharpen
->+ box blur
->+ gaussian blur <br>
+>+ Sharpen
+>+ Box blur
+>+ Gaussian blur <br>
 
 References: https://en.wikipedia.org/wiki/Kernel_(image_processing)
 
-Screenshots: <br>
+Screenshots (Identity, Sharpen, Box blur, Gaussian Blur): <br>
 ![Identity](/ImageFilter/ressources/Identity.png?raw=true)
 ![Sharpen](/ImageFilter/ressources/Sharpen.png?raw=true)
 ![Box blur](/ImageFilter/ressources/BoxBlur.png?raw=true)
