@@ -1,6 +1,6 @@
 # Directories
 bin/
-bin-int/
+obj/
 OpenGLBase.sln
 
 # VS
