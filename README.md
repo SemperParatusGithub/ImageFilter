@@ -5,6 +5,8 @@ Available effects:
 >+ Box blur
 >+ Gaussian blur <br>
 
+For edge handling the mirror method is used: The image is conceptually mirrored at the edges. For example, attempting to read a pixel 3 units outside an edge reads one 3 units inside the edge instead.
+
 References: https://en.wikipedia.org/wiki/Kernel_(image_processing)
 
 Screenshots (Identity, Sharpen, Box blur, Gaussian Blur): <br>
