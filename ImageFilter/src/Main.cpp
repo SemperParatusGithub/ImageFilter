@@ -155,7 +155,7 @@ int main(int argc, char *argv[])
 	WriteToFile(filteredBoxBlur, width, height, targetDir + "BoxBlur.png");
 
 	unsigned char *filteredgaussianBlur = FilterData(buffer, width, height, gaussianBlur);
-	WriteToFile(filteredgaussianBlur, width, height, targetDir + "GaussionBlur.png");
+	WriteToFile(filteredgaussianBlur, width, height, targetDir + "GaussianBlur.png");
 
 	// Deallocate 
 	stbi_image_free(buffer);
