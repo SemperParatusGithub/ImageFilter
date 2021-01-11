@@ -1,0 +1,11 @@
+# Directories
+bin/
+bin-int/
+OpenGLBase.sln
+
+# VS
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
