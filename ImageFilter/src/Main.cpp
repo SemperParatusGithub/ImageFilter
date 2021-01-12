@@ -129,7 +129,13 @@ int main(int argc, char *argv[])
 	std::cout << "Filepath: ";
 	std::cin >> filepath;
 
-	std::string targetDir = filepath.substr(0, filepath.find_last_of("/")) + "/filtered/";
+	std::string targetDir;
+	if (filepath.find("/") != std::string::npos)
+		targetDir = filepath.substr(0, filepath.find_last_of("/")) + "/filtered/";
+	
+	else 
+		targetDir = "filtered/";
+	
 	std::filesystem::create_directory(targetDir);
 
 	// Load Image
