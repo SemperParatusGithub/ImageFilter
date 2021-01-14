@@ -10,7 +10,7 @@ For edge handling the mirror method is used: The image is conceptually mirrored 
 
 References: https://en.wikipedia.org/wiki/Kernel_(image_processing)
 
-Screenshots (Identity, Sharpen, Box blur, Gaussian Blur): <br>
+Screenshots (Identity, Sharpen, Box blur, Gaussian Blur, Edge detection): <br>
 ![Identity](/ImageFilter/ressources/Identity.png?raw=true)
 ![Sharpen](/ImageFilter/ressources/Sharpen.png?raw=true)
 ![Box blur](/ImageFilter/ressources/BoxBlur.png?raw=true)
