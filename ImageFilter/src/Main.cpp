@@ -120,6 +120,11 @@ const Matrix3f gaussianBlur {
 	2.0f / 16.0f, 4.0f / 16.0f, 2.0f / 16.0f,
 	1.0f / 16.0f, 2.0f / 16.0f, 1.0f / 16.0f
 };
+const Matrix3f edgeDetection {
+	-1.0f, -1.0f, -1.0f,
+	-1.0f,  8.0f, -1.0f,
+	-1.0f, -1.0f, -1.0f
+};
 
 
 int main(int argc, char *argv[])
@@ -160,8 +165,11 @@ int main(int argc, char *argv[])
 	unsigned char *filteredBoxBlur = FilterData(buffer, width, height, boxBlur);
 	WriteToFile(filteredBoxBlur, width, height, targetDir + "BoxBlur.png");
 
-	unsigned char *filteredgaussianBlur = FilterData(buffer, width, height, gaussianBlur);
-	WriteToFile(filteredgaussianBlur, width, height, targetDir + "GaussianBlur.png");
+	unsigned char *filteredGaussianBlur = FilterData(buffer, width, height, gaussianBlur);
+	WriteToFile(filteredGaussianBlur, width, height, targetDir + "GaussianBlur.png");
+
+	unsigned char *filteredEdgeDetection = FilterData(buffer, width, height, edgeDetection);
+	WriteToFile(filteredEdgeDetection, width, height, targetDir + "EdgeDetection.png");
 
 	// Deallocate 
 	stbi_image_free(buffer);
@@ -169,7 +177,8 @@ int main(int argc, char *argv[])
 	delete[] filteredIdentity;
 	delete[] filteredSharpen;
 	delete[] filteredBoxBlur;
-	delete[] filteredgaussianBlur;
+	delete[] filteredGaussianBlur;
+	delete[] filteredEdgeDetection;
 
 	return EXIT_SUCCESS;
 }
