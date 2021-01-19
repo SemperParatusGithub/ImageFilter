@@ -3,17 +3,19 @@ Simple image filter in C++ based on an individual school task by DI Florian Iven
 Available effects:
 >+ Sharpen
 >+ Box blur
->+ Gaussian blur <br>
+>+ Gaussian blur
+>+ Edge detection <br>
 
 For edge handling the mirror method is used: The image is conceptually mirrored at the edges. For example, attempting to read a pixel 3 units outside an edge reads one 3 units inside the edge instead.
 
 References: https://en.wikipedia.org/wiki/Kernel_(image_processing)
 
-Screenshots (Identity, Sharpen, Box blur, Gaussian Blur): <br>
+Screenshots (Identity, Sharpen, Box blur, Gaussian Blur, Edge detection): <br>
 ![Identity](/ImageFilter/ressources/Identity.png?raw=true)
 ![Sharpen](/ImageFilter/ressources/Sharpen.png?raw=true)
 ![Box blur](/ImageFilter/ressources/BoxBlur.png?raw=true)
 ![Gaussian blur](/ImageFilter/ressources/GaussianBlur.png?raw=true)
+![Edge detection](/ImageFilter/ressources/EdgeDetection.png?raw=true)
 
 ## License
 This project is under the MIT license. For full license text see LICENCE.txt
