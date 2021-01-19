@@ -62,9 +62,9 @@ namespace Matrix
 	static Matrix3f ComponentWiseMultiplication(const Matrix3f &mat1, const Matrix3f &mat2)
 	{
 		return Matrix3f {
-			mat1(0, 0) * mat2(0, 0),	mat1(0, 1) * mat2(0, 1),	mat1(0, 2) * mat2(0, 2),
-			mat1(1, 0) * mat2(1, 0),	mat1(1, 1) * mat2(1, 1),	mat1(1, 2) * mat2(2, 2),
-			mat1(2, 0) * mat2(2, 0),	mat1(2, 1) * mat2(2, 1),	mat1(2, 2) * mat2(2, 2)
+			mat1(0, 0) * mat2(2, 2),	mat1(0, 1) * mat2(2, 1),	mat1(0, 2) * mat2(2, 0),
+			mat1(1, 0) * mat2(1, 2),	mat1(1, 1) * mat2(1, 1),	mat1(1, 2) * mat2(1, 0),
+			mat1(2, 0) * mat2(0, 2),	mat1(2, 1) * mat2(0, 1),	mat1(2, 2) * mat2(0, 0)
 		};
 	}
 }
