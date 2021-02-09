@@ -32,10 +32,8 @@ public:
 			for (std::size_t j = 0; j < 3; j++)
 				sum += this->operator()(i, j);
 
-		if (sum > 255.0f)
-			sum = 255.0f;
-		if (sum < 0.0f)
-			sum = 0.0f;
+		sum = std::min(sum, 255.0f);
+		sum = std::max(sum, 0.0f);
 
 		return sum;
 	}
