@@ -1,3 +1,7 @@
+#ifdef _MSC_VER
+	#pragma warning(disable : 26451)
+#endif
+
 #include <stb_image.h>
 #include <stb_image_write.h>
 
@@ -58,9 +62,9 @@ unsigned char *FilterData(unsigned char *buffer, int width, int height, const Ma
 			}
 
 			filtered[x][y] =
-			{	(unsigned char) Matrix::ComponentWiseMultiplication(filter, matrixR).GetTotalElementsCount(),
-				(unsigned char) Matrix::ComponentWiseMultiplication(filter, matrixG).GetTotalElementsCount(),
-				(unsigned char) Matrix::ComponentWiseMultiplication(filter, matrixB).GetTotalElementsCount() };
+			{	(unsigned char) Matrix3f::ComponentWiseMultiplication(filter, matrixR).GetTotalElementsCount(),
+				(unsigned char) Matrix3f::ComponentWiseMultiplication(filter, matrixG).GetTotalElementsCount(),
+				(unsigned char) Matrix3f::ComponentWiseMultiplication(filter, matrixB).GetTotalElementsCount() };
 		}
 	}
 
